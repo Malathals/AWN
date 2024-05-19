@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" id="booking">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking</title>
+  <link rel="stylesheet" href="styles/bookingstyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="cont">
+  
+  <nav>
+    <a href="ladingP"> <h2>AWN</h2> </a>
+   <ul class="nav">
+     <li><a href="#content">Home</a></li>
+     <li><a href="#about">About us</a></li>
+     <li><a href="#ser">Servises</a></li>
+     <li><a href="#foot">Contact</a>
+     </li>
+
+     <li><a  class="user" href="web.html">
+         <img src="logout.png" >
+         </a>
+
+         <div class="dropdown">
+             <button class="dropbtn"><img src="profile.png"></button>
+             <div class="dropdown-content">
+               <a href="booking.html">My Booking</a>
+               <a href="offerslistPR.html">Offers</a>
+               <a href="reqlistPR.html">My Requests</a>
+             </div>
+           </div>
+           
+           
+         </button>
+         </a>
+    </li>
+   </ul>
+ </nav>
+    </header>
+
+
+
+<div class="Current">
+<h1 class="title">Current Booking</h1>
+
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+        <h2>type of service</h2>
+      <div class="cslider__info">
+        <a href="babysitter.html"><h3>@babysitter acount</h3></a>
+        <h3>#booking number</h3>
+        <h3>duration</h3>
+        <h3>date</h3>
+
+
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>Homework Help</h2>
+        <div class="cslider__info">
+          <a href="babysitter.html"><h3>@monicageller</h3></a>
+          <h3>#1086</h3>
+          <h3>3 hours</h3>
+          <h3>1-5-2022</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+    <div class="slider__item">
+        <h2>type of service</h2>
+        <div class="cslider__info">
+          <a href="#"><h3>@babysitter acount</h3></a>
+          <h3>#booking number</h3>
+          <h3>duration</h3>
+          <h3>date</h3>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>
+<hr>
+<div class="Previous">
+    <h1 class="title">Previous Booking</h1>
+    
+    <div class="slider" x-data="{start: true, end: false}">
+      <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+        <div class="slider__item">
+            <h2>type of service</h2>
+          <div class="pslider__info">
+            <a href="#"><h3>@babysitter acount</h3></a>
+            <h3>#booking number</h3>
+            <h3>duration</h3>
+            <h3>date</h3>
+            <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+
+
+           
+    
+          </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+          
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+            </div>
+          </div>
+          
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+          </div>
+            </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+          </div>
+          
+        </div>
+        </div>
+        <div class="slider__item">
+            <h2>type of service</h2>
+            <div class="pslider__info">
+              <a href="#"><h3>@babysitter acount</h3></a>
+              <h3>#booking number</h3>
+              <h3>duration</h3>
+              <h3>date</h3>
+              <div class="rating">
+                <button class="rate">Rate</button>
+            <button class="review">Review</button>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+      <div class="slider__nav">
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+      </div>
+    </div>
+</div>
+<!-- partial -->
+<footer class="footer">
+  
+  
+    <ul class="Lf">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About us</a>
+        </li>
+        <li>
+            <a href="#">Servises</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        
+    </ul>
+    
+            <ul class="icon">
+                <li>
+                    <a href="">
+                        <img src="twitter.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="linkedin.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="instagram.png">
+                    </a>
+                </li>  
+                     
+  
+    <p class="copyRight">
+       Aon team &#169; 2021
+        </p>
+      </footer>
+</body>
+</html>
